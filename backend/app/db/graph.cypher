@@ -1,0 +1,3 @@
+CREATE CONSTRAINT target_id IF NOT EXISTS FOR (t:Target) REQUIRE t.id IS UNIQUE;
+CREATE CONSTRAINT vulnerability_id IF NOT EXISTS FOR (v:Vulnerability) REQUIRE v.id IS UNIQUE;
+CREATE CONSTRAINT remediation_id IF NOT EXISTS FOR (r:Remediation) REQUIRE r.id IS UNIQUE;

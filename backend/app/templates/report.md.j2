@@ -1,0 +1,53 @@
+# ScopeGuard AI Assessment Report
+
+Generated: {{ generated_at }}
+Scan ID: {{ scan.id }}
+Target: {{ scan.target }}
+Status: {{ scan.status.value }}
+
+## Executive Summary
+
+{{ summary }}
+
+## Scope & Authorization
+
+- Engagement: {{ engagement.name }}
+- Approved Scope: {{ engagement.scope | join(", ") }}
+- Approval Mode: {{ "Enabled" if engagement.approval_mode else "Disabled" }}
+- Human In The Loop: {{ "Enabled" if scan.human_in_the_loop else "Disabled" }}
+
+## Findings
+
+{% if findings %}
+{% for finding in findings %}
+### {{ finding.title }} ({{ finding.severity.value | upper }})
+
+Source: {{ finding.plugin }}
+
+Description:
+{{ finding.description }}
+
+Evidence:
+{{ finding.evidence }}
+
+Remediation:
+{{ finding.remediation }}
+
+References:
+{% for item in finding.references %}
+- {{ item }}
+{% endfor %}
+
+{% endfor %}
+{% else %}
+No material findings were recorded in this run.
+{% endif %}
+
+## Severity Distribution
+
+{{ severity_counts }}
+
+## Operator Notes
+
+This report was generated for authorized security assessment only. ScopeGuard AI does not deliver exploits or unauthorized attack automation.
+

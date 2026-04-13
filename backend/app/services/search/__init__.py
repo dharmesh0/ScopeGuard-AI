@@ -1,0 +1,2 @@
+"""External search provider abstraction."""
+
