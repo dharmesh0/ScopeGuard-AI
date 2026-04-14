@@ -2,7 +2,6 @@
 
 ScopeGuard AI is a production-style, open-source platform for **authorized** AI-assisted security assessments. It keeps the architectural strengths of a modern automated testing stack, including sandboxed execution, background workers, semantic memory, a knowledge graph, monitoring, and a polished operator UI, while explicitly avoiding exploit delivery and unsafe offensive automation.
 
-Suggested modern name over "AutoPentest AI": **ScopeGuard AI**. The name emphasizes the most important security control in the platform: explicit, enforceable scope.
 
 ## Ethical and legal use
 
